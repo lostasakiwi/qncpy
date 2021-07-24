@@ -1,0 +1,2 @@
+# qncpy
+Quick network check
