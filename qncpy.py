@@ -13,7 +13,7 @@ requests.packages.urllib3.disable_warnings()
 def config_file_check():
     """Checks for existence of qncpy.conf file """
     if not os.path.exists('qncpy.conf'):
-        print("config file qncpy.conff not found")
+        print("config file qncpy.conf not found")
         sys.exit()
 
 
