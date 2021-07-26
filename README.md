@@ -23,13 +23,17 @@ e up e.g. my default gateway, google, my external DNS provider. Anything that wo
 `qncpy.py` is the script. There is some simple error checking to make sure the `qncpy.conf` file makes sense e.g. DNS lookup, is the port number valid etc.
 `qncpy.conf` is the configuration file that the script looks for in the same directory. The default file included shows some examples
 There are 3 fields required separated by ::
+
   1 - Hostname or IP address
   2 - connection type either http or tcp
   3 - port(s) separated by , e.g. 80,8080
 e.g.
 
-`1.1.1.1::tcp::53,80`
-`one.one.one.one::http::80`
+```bash
+1.1.1.1::tcp::53,80
+https://cloudflare.com::http::443
+https://google.com::http::443
+```
 
 ### Output
 
