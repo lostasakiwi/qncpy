@@ -1,0 +1,24 @@
+26-Jul-2021 15:38:56  Total run time: 1.15s
+http hosts NOT responding or 500+ response
+--------------------------------------------------
+None found
+
+tcp host ports NOT responding
+--------------------------------------------------
+None found
+
+http hosts reporting 100-499 [port :response code]
+--------------------------------------------------
+https://www.grc.com/passwords  ['443 :200']
+http://www.google.com          ['80 :200']
+http://www.google.com/bogusurl ['80 :404']
+https://www.google.com         ['443 :200']
+
+tcp hosts responding OK
+--------------------------------------------------
+grc.com                        ['80', '443']
+1.1.1.1                        ['53', '80']
+
+Errors detected in config_file
+--------------------------------------------------
+None found
