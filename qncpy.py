@@ -13,16 +13,22 @@ requests.packages.urllib3.disable_warnings()
 def config_file_check():
     """Checks for existence of qncpy.conf file """
     if not os.path.exists('qncpy.conf'):
-        print("config file qncpy.conf not found")
+        print("config file qncpy.conff not found")
         sys.exit()
 
 
 def read_config_file():
     """Import host, socket type and ports from config_data file"""
+    """Ignore comments #, lines that start with spaces, and blank lines"""
+    r_lines = []
     with open('qncpy.conf', 'r') as f:
-        lines = f.readlines()
-        lines = [line.rstrip() for line in lines]
-    return lines
+        raw_lines = f.readlines()
+        for line in raw_lines:
+            if line.startswith("#") or line.startswith(" ") or not line.strip():
+                pass
+            else:
+                 r_lines.append(line) 
+    return r_lines
 
 
 def port_check(hostname, port):
@@ -180,7 +186,7 @@ def write_report(start_time):
         f.write(f"\nErrors detected in config_file\n{'-' * 50}\n")
         dict_writer(errors, f)
         print("\nReport written to", today_write_filename_gen())
-        print("\nversion = 0.8011") 
+        print("\nversion = 0.8013") 
 
 
 def print_report(start_time):
@@ -213,5 +219,3 @@ def main():
 if __name__ == "__main__":
     errors, tcp_up, tcp_down, http_up, http_down = {}, {}, {}, {}, {}
     main()
-
-
