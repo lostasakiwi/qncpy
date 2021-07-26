@@ -1,6 +1,6 @@
 # qncpy
 
-Quick network check using either http or tcp.            
+Quick network check using either http or tcp. http also returns response code e.g. 200, 404 etc, tcp returns up or down.     
 
 ## Requirements
 
