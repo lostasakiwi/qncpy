@@ -5,6 +5,7 @@ Quick network check using either http or tcp.
 ## Requirements
 
 - python 3.7 or above
+- requests
 
 ### Use cases
 
