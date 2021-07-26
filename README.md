@@ -24,9 +24,10 @@ e up e.g. my default gateway, google, my external DNS provider. Anything that wo
 `qncpy.conf` is the configuration file that the script looks for in the same directory. The default file included shows some examples
 There are 3 fields required separated by ::
 
-  1 - Hostname or IP address
-  2 - connection type either http or tcp
-  3 - port(s) separated by , e.g. 80,8080
+   - Hostname or IP address
+   - connection type either http or tcp
+   - port(s) separated by , e.g. 80,8080
+
 e.g.
 
 ```bash
